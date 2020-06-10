@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head lang="en">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Current Weather</title>
-    <link rel="shortcut icon" href="/favicon.ico" />
+
+  <head>
+    <title>Weather Tracker</title>
     <link rel="stylesheet" href="/screen.css" />
   </head>
+
   <body>
-    <h1 class="hello-world"></h1>
-    <script src="/main.js" charset="utf-8"></script>
+    <h1 class="title">Weather Tracker</h1>
+    <div class="page">
+      <div class="content-input">
+        <div class="content-input-position">
+          <label class="city-zip" for="city">City Name:</label>
+          <input type="text" id="city" name="city" autocomplete="off" />
+          <button class="button-style" onclick="getWeatherByCityName()">
+            Search
+          </button>
+        </div>
+        <div class="content-input-position">
+          <label class="city-zip" for="zip">Zip Code:</label>
+          <input type="text" id="zip" name="zip" autocomplete="off" />
+          <button class="button-style" onclick="getWeatherByZipCode()">
+            Search
+          </button>
+        </div>
+        <div class="content-input-button">
+          <button class="button-style" onclick="resetGame()">
+            Reset
+          </button>
+        </div>
+      </div>
+      <div class="content">
+        <p id="weather-in">Welcome to the Weather Tracker!</p>
+        <p id="temp">Temperature:</p>
+        <p id="min-temp">Min Temp:</p>
+        <p id="max-temp">Max Temp:</p>
+        <p id="pressure">Pressure:</p>
+        <p id="humidity">Humidity:</p>
+        <p id="sunrise">Sunrise:</p>
+        <p id="sunset">Sunset:</p>
+
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/main.js"></script>
+
   </body>
+
 </html>
