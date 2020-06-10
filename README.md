@@ -4,7 +4,7 @@
 
 ### See it live
 
-http:// .surge.sh/
+http://steven-zambito-weather-tracker.surge.sh/
 
 ### Summary
 
